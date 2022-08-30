@@ -24,6 +24,7 @@ select   p.motivo_cancelamento
         ,count(p.motivo_cancelamento) as qtde
 from     pedido p
 where    p.motivo_cancelamento > 0
+group by p.motivo_cancelamento
 having   count(p.motivo_cancelamento) > 10
 
 -- junções entre tabelas para fornecer uma perspectiva mais complexa dos dados
